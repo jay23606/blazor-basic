@@ -1,6 +1,6 @@
-﻿@page "/"
+@page "/"
 @using Microsoft.AspNetCore.Components.WebAssembly.Hosting
-@*@inject IConfiguration Configuration*@
+@inject IConfiguration config
 @inject IWebAssemblyHostEnvironment HostEnvironment
 
 <PageTitle>Index</PageTitle>
@@ -8,11 +8,9 @@
 <h1>Hello, world!!!!!</h1>
 
 <div>
-    @*<p>API: @Configuration["ApiURL"] </p>
-    <p>ENV: @Configuration["Field1"]</p>*@
+    <p>ENV: @config["Field1"]</p>
     <p>ENVIRONMENT: @HostEnvironment.Environment</p>
     <p>BASE ADDRESS: @HostEnvironment.BaseAddress</p>
-    @*@Configuration["Person:Name"]*@
 </div>
 
 Welcome to your new app.
